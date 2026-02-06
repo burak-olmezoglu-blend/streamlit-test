@@ -13,8 +13,8 @@ from ultralytics import YOLO
 
 threshold = 0.5
 
-model_path = os.path.join(os.path.dirname(__file__), "yolo26s.pt")
-model = YOLO(model_path)
+# model_path = os.path.join(os.path.dirname(__file__), "yolo26s.pt")
+model = YOLO("yolo26s.pt")
 
 uploaded_file = st.file_uploader("Bir görüntü yükleyiniz", type=["jpg", "jpeg", "png"])
 
@@ -38,3 +38,4 @@ if uploaded_file is not None:
     st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
     
         
+
